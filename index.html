@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Robby Choudhary | Author</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#050505;
+color:#e5dccf;
+font-family:'Cormorant Garamond',serif;
+overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at center,
+rgba(76,44,122,.3),
+transparent 60%);
+pointer-events:none;
+z-index:-1;
+}
+
+/* Stars */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-2;
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2}
+50%{opacity:1}
+}
+
+/* Header */
+
+header{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:4rem;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.4rem;
+max-width:700px;
+margin:auto;
+opacity:.85;
+line-height:1.7;
+}
+
+.scroll{
+margin-top:40px;
+font-size:1rem;
+letter-spacing:3px;
+opacity:.7;
+}
+
+/* Sections */
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-family:'Cinzel',serif;
+font-size:2.3rem;
+margin-bottom:30px;
+text-align:center;
+}
+
+.card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.08);
+padding:40px;
+border-radius:20px;
+backdrop-filter:blur(5px);
+max-width:1000px;
+margin:auto;
+}
+
+.card p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+/* Current Work */
+
+.book{
+margin-top:30px;
+padding:30px;
+border-left:3px solid #8d6df3;
+background:rgba(141,109,243,.08);
+border-radius:10px;
+}
+
+.book h3{
+font-family:'Cinzel',serif;
+font-size:2rem;
+margin-bottom:15px;
+}
+
+/* Quote */
+
+.quote{
+text-align:center;
+font-size:1.6rem;
+font-style:italic;
+padding:120px 10%;
+opacity:.85;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p{
+opacity:.7;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+.section-title{
+font-size:1.8rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<header>
+
+<div class="hero">
+
+<h1>ROBBY CHOUDHARY</h1>
+
+<p>
+Author of fantasy and science-fiction worlds where mysteries are ancient,
+power has consequence, and every legend leaves a scar upon history.
+</p>
+
+<div class="scroll">
+SCROLL TO ENTER
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">The Author</h2>
+
+<div class="card">
+
+<p>
+
+Welcome, traveler.
+
+I am Robby Choudhary, a storyteller dedicated to creating worlds that
+feel alive beyond the page. My stories explore forgotten civilizations,
+mythic powers, ancient mysteries, scientific imagination, and the choices
+that shape heroes and monsters alike.
+
+Every world I create follows its own logic, history, and laws. Whether
+through fantasy kingdoms, cosmic civilizations, or lost legends, my goal
+is to invite readers into places that feel real enough to remember long
+after the final chapter.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Current Work</h2>
+
+<div class="card">
+
+<div class="book">
+
+<h3>Eldrya</h3>
+
+<p>
+
+<b>First Saga: Genesis</b>
+
+<br><br>
+
+In a world woven from ancient powers and forgotten truths, destinies
+begin to awaken.
+
+The First Saga follows the earliest steps of a greater journey,
+where mysteries buried beneath history slowly reveal themselves,
+and the fate of Eldrya begins to turn.
+
+Ancient forces stir.
+Old legends return.
+And a new generation stands at the edge of a changing world.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="quote">
+
+"Every world begins as a whisper before it becomes a legend."
+
+</div>
+
+<section>
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>
+
+Interested in my work, future projects, or upcoming releases?
+
+You can add your email address, social media profiles,
+or publication links here.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Robby Choudhary. All Rights Reserved.
+</p>
+
+</footer>
+
+<script>
+
+const stars = document.getElementById("stars");
+
+for(let i=0;i<150;i++){
+
+const star=document.createElement("div");
+
+star.classList.add("star");
+
+let size=Math.random()*3;
+
+star.style.width=size+"px";
+star.style.height=size+"px";
+
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=Math.random()*4+"s";
+
+stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+  </html>
